@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Nick and Prab Real Estate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "tertiary": "#5d5f5f",
+                        "inverse-primary": "#dec800",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#303031",
+                        "outline-variant": "#cec7aa",
+                        "primary-fixed": "#fee400",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#201c00",
+                        "surface-container": "#efeded",
+                        "surface-container-high": "#e9e8e7",
+                        "on-secondary": "#ffffff",
+                        "primary": "#6a5f00",
+                        "secondary-container": "#e2dfde",
+                        "on-secondary-container": "#636262",
+                        "surface-bright": "#fbf9f9",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "primary-container": "#ffe500",
+                        "primary-fixed-dim": "#dec800",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-primary-fixed-variant": "#504700",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "tertiary-container": "#e4e4e4",
+                        "on-surface-variant": "#4b4731",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-background": "#1b1c1c",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-primary-container": "#726600",
+                        "secondary": "#5f5e5e",
+                        "outline": "#7d775f",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f5f3f3",
+                        "on-tertiary": "#ffffff",
+                        "background": "#fbf9f9",
+                        "surface-tint": "#6a5f00",
+                        "inverse-on-surface": "#f2f0f0",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface": "#fbf9f9",
+                        "on-surface": "#1b1c1c",
+                        "surface-dim": "#dbdad9",
+                        "surface-container-highest": "#e3e2e2",
+                        "on-tertiary-container": "#646566",
+                        "surface-variant": "#e3e2e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display-md": ["Playfair Display"],
+                        "body-md": ["Lato"],
+                        "body-lg": ["Lato"],
+                        "label-md": ["Lato"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "label-lg": ["Lato"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-sm": ["Lato"]
+                    },
+                    "fontSize": {
+                        "display-md": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-lg": ["14px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Lato', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full bg-surface-container-lowest shadow-sm border-b border-outline-variant z-50">
+<nav class="flex justify-between items-center px-margin-desktop h-20 w-full max-w-container-max mx-auto">
+<div class="font-display-md text-2xl font-bold text-on-surface">NP REAL ESTATE</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-lg text-secondary hover:text-primary transition-colors" href="#">Buy</a>
+<a class="font-label-lg text-secondary hover:text-primary transition-colors" href="#">Sell</a>
+<a class="font-label-lg text-secondary hover:text-primary transition-colors" href="#">Rent</a>
+<a class="font-label-lg text-primary font-bold border-b-2 border-primary pb-1" href="#">About</a>
+<a class="font-label-lg text-secondary hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-lg px-6 py-3 cursor-pointer active:opacity-80 transition-opacity font-bold">
+            Request Appraisal
+        </button>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[614px] flex items-center justify-center text-center px-margin-mobile overflow-hidden">
+<div class="absolute inset-0 bg-on-surface z-0">
+<div class="w-full h-full opacity-40 bg-cover bg-center" data-alt="A sophisticated wide-angle photograph of a modern, luxury real estate office interior with minimalist charcoal furniture and subtle yellow accents. The lighting is soft and architectural, emphasizing clean lines and a premium corporate environment. High-end materials like marble and dark wood are visible in the blurred background to establish a sense of local mastery and professionalism." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMagP2VZV-GnY7V8k3yOIjYjOhj810SSAvq2WGLH694jgfCvwuqKYc3VwYTw1XpesVdISKUkVhE4rf1TvXnYbvVmlY8OdXB6wXr_CkHcRgbenD9vbT5uuEqOTGfO2fBCsCOp4_vW2-H8oRBGM9fCX88OZ4GyK53Mhwth1_eYfBmm4uli1WlD2L2Di60sEfe5-BnyzZ3JS0mpPATK_UnxHoqELm2bXXsIq1w4zuW4-ZBcpuykUhuMlv')"></div>
+</div>
+<div class="relative z-10 max-w-3xl">
+<h1 class="font-display-lg text-surface-container-lowest mb-6">Defining Excellence in Real Estate</h1>
+<p class="font-body-lg text-surface-variant max-w-2xl mx-auto">Meet Nick and Prab, the duo transforming the local property market through transparency, surgical precision, and high-stakes reliability.</p>
+</div>
+</section>
+<!-- Partnership Section (Ray White) -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/2">
+<span class="text-primary font-label-lg uppercase tracking-widest block mb-4">The Partnership</span>
+<h2 class="font-headline-lg text-on-surface mb-6">Backed by the Heritage of Ray White</h2>
+<p class="text-on-surface-variant mb-8 leading-relaxed font-body-md">
+                        Nick and Prab operate within the powerful ecosystem of Ray White, Australasia's largest real estate group. This partnership combines local specialist knowledge with global reach and industry-leading technology, ensuring our clients receive an unfair advantage in every transaction.
+                    </p>
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-md text-on-surface">Global Reach</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-md text-on-surface">Data-Driven Insights</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 flex justify-center">
+<div class="p-8 bg-surface-container-lowest border border-outline-variant shadow-sm w-full max-w-md text-center">
+<div class="h-24 flex items-center justify-center mb-6">
+<div class="text-4xl font-extrabold text-on-surface tracking-tighter">Ray<span class="text-primary">White</span></div>
+</div>
+<p class="font-label-md text-secondary uppercase tracking-widest">Established Partnership 2024</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission Statement (Bento Style) -->
+<section class="py-24 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<div class="md:col-span-8 bg-on-surface text-surface-container-lowest p-12 flex flex-col justify-center">
+<h2 class="font-headline-lg mb-6">Our Mission</h2>
+<p class="font-headline-lg-mobile md:text-5xl leading-tight">To provide a premium real estate experience rooted in <span class="text-primary-container">radical transparency</span> and relentless pursuit of results.</p>
+</div>
+<div class="md:col-span-4 bg-primary-container p-12 flex flex-col justify-between">
+<span class="material-symbols-outlined text-on-surface text-4xl" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+<div>
+<div class="text-5xl font-bold text-on-surface mb-2">15 Days</div>
+<p class="font-label-lg text-on-surface-variant uppercase tracking-wide">Avg. Sale Time across our portfolio</p>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface-container-lowest border border-outline-variant p-8">
+<h3 class="font-headline-md text-on-surface mb-4">Local Mastery</h3>
+<p class="text-on-surface-variant font-body-md">Deep-rooted knowledge of every street and suburb we serve, providing surgical precision in valuations.</p>
+</div>
+<div class="md:col-span-4 bg-surface-container-lowest border border-outline-variant p-8">
+<h3 class="font-headline-md text-on-surface mb-4">Modern Edge</h3>
+<p class="text-on-surface-variant font-body-md">Utilizing high-end editorial marketing and cinematic property tours to capture the premium market.</p>
+</div>
+<div class="md:col-span-4 bg-surface-container-lowest border border-outline-variant p-8">
+<h3 class="font-headline-md text-on-surface mb-4">Client Trust</h3>
+<p class="text-on-surface-variant font-body-md">A commitment to being premium advisors, not just facilitators, building lifelong relationships.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Bios Section -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-on-surface">The Partners</h2>
+<div class="h-1.5 w-24 bg-primary-container mx-auto mt-6"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+<!-- Nick's Bio -->
+<div class="group">
+<div class="relative overflow-hidden mb-8">
+<img class="w-full aspect-[4/5] object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A professional studio portrait of Nick, a lead real estate agent. He is dressed in a sharp charcoal suit with a crisp white shirt, exuding confidence and authority. The lighting is editorial and high-contrast, against a clean light grey background that matches the premium corporate aesthetic of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpmYs06u8nj5O0x8SnrGm6y5G_Q9WZQX9FXXAT8RP9sWE3HJszDq1oOnU3SlW0fnfkNtv9Qv2qWRTS1tcgkPeowGgP60HES5MsqW1_l_0jjfKyVh-MYCXaik2pPXXBE4ZaHBgfMPiFuTkBMTWQ2-ZqhoOJRUed32pd31cpIjMtclDNR6Lt8DVZ-C7QZq941TAP7FvRVrjaHpoVX5sHJxfGD5yrFpRNYDsRnn0qxMjBAss7SwbvPnrs"/>
+<div class="absolute bottom-0 left-0 bg-on-surface text-primary-container px-8 py-4 font-headline-md">
+                            Nick
+                        </div>
+</div>
+<div class="pr-8">
+<h3 class="font-headline-md text-on-surface mb-2">Lead Partner &amp; Strategist</h3>
+<p class="text-secondary font-label-md mb-6 uppercase tracking-widest">12+ Years Experience</p>
+<p class="text-on-surface-variant leading-relaxed mb-8 font-body-md">
+                            Nick is known for his analytical approach to real estate. With a background in property development and high-level negotiation, he views every listing as a strategic asset. His ability to navigate complex market shifts and provide candid, data-driven advice has earned him a reputation as the "advisor of choice" for serious sellers.
+                        </p>
+<div class="flex gap-4">
+<a class="w-12 h-12 border border-outline-variant flex items-center justify-center hover:bg-on-surface hover:text-surface transition-all" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="w-12 h-12 border border-outline-variant flex items-center justify-center hover:bg-on-surface hover:text-surface transition-all" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+</div>
+<!-- Prab's Bio -->
+<div class="group">
+<div class="relative overflow-hidden mb-8">
+<img class="w-full aspect-[4/5] object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A professional studio portrait of Prab, a partner real estate agent. He is wearing a modern charcoal blazer over a black turtleneck, projecting a blend of approachability and sophisticated style. The lighting is soft and warm, capturing a high-stakes professional yet inviting persona against a minimalist neutral studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8RprZ19jzh90003hIJsm7ZJleQSof1Ft7j3YhHLOqKYOsfrrdZzIAihNHwvJzFC-OssxmZUdzZoxzwYGnbZL7Ar85sTG11LKcxR7mL7XvDNICC3Zwn2zMmelOpJ1dmH64Ysv4JMg-nXrJezQ0uAlsE6hifElnXaiDKTj29JUjVgzlPvG4w6F9I6KiWj0wGOZbWQBoT-zqs262xFEuBwuIaw51tKM3LRbCPwEYV_vF57XbS-_YRvua"/>
+<div class="absolute bottom-0 left-0 bg-on-surface text-primary-container px-8 py-4 font-headline-md">
+                            Prab
+                        </div>
+</div>
+<div class="pr-8">
+<h3 class="font-headline-md text-on-surface mb-2">Partner &amp; Marketing Specialist</h3>
+<p class="text-secondary font-label-md mb-6 uppercase tracking-widest">Master of Presentation</p>
+<p class="text-on-surface-variant leading-relaxed mb-8 font-body-md">
+                            Prab brings a fresh, dynamic energy to the team. A specialist in modern digital marketing and buyer psychology, he ensures that every property he touches is presented to perfection. His focus on creating emotional resonance through cinematic storytelling and impeccable staging consistently drives higher engagement and premium results for his clients.
+                        </p>
+<div class="flex gap-4">
+<a class="w-12 h-12 border border-outline-variant flex items-center justify-center hover:bg-on-surface hover:text-surface transition-all" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="w-12 h-12 border border-outline-variant flex items-center justify-center hover:bg-on-surface hover:text-surface transition-all" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-on-surface text-surface-container-lowest">
+<div class="max-w-4xl mx-auto px-margin-mobile text-center">
+<h2 class="font-display-lg mb-6">Ready to experience a different kind of real estate?</h2>
+<p class="font-body-lg text-surface-variant mb-12">Let Nick and Prab provide you with a comprehensive market report and strategy for your property.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-primary-container text-on-surface px-10 py-5 font-bold font-label-lg hover:bg-surface-container-lowest transition-colors">Request a Strategy Session</button>
+<button class="border-2 border-surface-container-lowest text-surface-container-lowest px-10 py-5 font-bold font-label-lg hover:bg-surface-container-lowest hover:text-on-surface transition-colors">View Recent Sales</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-surface dark:bg-surface-container-lowest w-full py-24">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-display-md text-xl font-bold text-surface-container-lowest mb-6">NP REAL ESTATE</div>
+<p class="text-surface-variant font-body-md opacity-70">Elevating the real estate experience through precision and passion.</p>
+</div>
+<div class="flex flex-col space-y-3">
+<h4 class="text-primary-fixed font-bold mb-2 font-display-md text-lg">Explore</h4>
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-all hover:translate-x-1" href="#">Office Locations</a>
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-all hover:translate-x-1" href="#">Meet the Team</a>
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-all hover:translate-x-1" href="#">Market Reports</a>
+</div>
+<div class="flex flex-col space-y-3">
+<h4 class="text-primary-fixed font-bold mb-2 font-display-md text-lg">Legal</h4>
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-all hover:translate-x-1" href="#">Privacy Policy</a>
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-all hover:translate-x-1" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col space-y-3">
+<h4 class="text-primary-fixed font-bold mb-2 font-display-md text-lg">Contact</h4>
+<p class="text-surface-variant opacity-70 font-body-md">123 Real Estate Way<br/>Premium Suburb, 4000</p>
+<p class="text-surface-variant opacity-70 font-body-md">hello@nprealestate.com.au</p>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-20 pt-8 border-t border-surface-variant/10 text-center">
+<p class="text-surface-variant font-body-sm opacity-50">© 2024 Nick and Prab Real Estate. All rights reserved. Powered by Ray White.</p>
+</div>
+</footer>
+<script>
+    // Simple scroll interaction for the header
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('shadow-lg');
+        } else {
+            header.classList.remove('shadow-lg');
+        }
+    });
+</script>
+</body></html>

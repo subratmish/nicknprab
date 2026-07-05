@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #1b1c1c;
+  --olive: #6a5f00;
+  --yellow: #ffe500;
+  --yellow-deep: #dec800;
+  --surface: #fbf9f9;
+  --surface-low: #f5f3f3;
+  --surface-high: #e9e8e7;
+  --border: #d8d2c3;
+  --border-variant: #cec7aa;
+  --footer: #4b4b4a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Lato", Arial, sans-serif;
+    font-weight: 300;
+    background-color: var(--surface);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+  }
+
+  ::selection {
+    background-color: var(--yellow);
+    color: var(--ink);
+  }
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-16;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3.5 text-xs font-bold uppercase tracking-[0.12em] transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply btn bg-ink text-white hover:-translate-y-0.5 hover:bg-ink/90 hover:shadow-card-hover;
+  }
+
+  .btn-yellow {
+    @apply btn bg-brand-yellow text-ink hover:-translate-y-0.5 hover:shadow-card-hover;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-ink text-ink hover:-translate-y-0.5 hover:bg-ink hover:text-white;
+  }
+
+  .btn-outline-light {
+    @apply btn border-2 border-white/80 text-white hover:-translate-y-0.5 hover:bg-white hover:text-ink;
+  }
+
+  .eyebrow {
+    @apply text-[11px] font-bold uppercase tracking-[0.2em] text-brand-olive;
+  }
+
+  .section-padding {
+    @apply py-20 lg:py-24;
+  }
+
+  .hero-quote-flip {
+    perspective: 900px;
+    min-height: 4rem;
+  }
+
+  .hero-quote-face {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform-origin: center center;
+    transform: rotateX(90deg) translateY(16px);
+    backface-visibility: hidden;
+    animation: heroQuoteVerticalFlip 13.6s ease-in-out infinite;
+    will-change: opacity, transform;
+  }
+}
+
+@keyframes heroQuoteVerticalFlip {
+  0% {
+    opacity: 0;
+    transform: rotateX(90deg) translateY(16px);
+  }
+
+  5%,
+  22% {
+    opacity: 1;
+    transform: rotateX(0deg) translateY(0);
+  }
+
+  27%,
+  100% {
+    opacity: 0;
+    transform: rotateX(-90deg) translateY(-16px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-quote-face {
+    animation: none;
+    opacity: 0;
+    transform: none;
+  }
+
+  .hero-quote-face:first-child {
+    opacity: 1;
+  }
+}

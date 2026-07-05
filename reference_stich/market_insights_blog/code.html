@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Market Insights | NP REAL ESTATE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .premium-shadow {
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05);
+        }
+        .hover-card:hover {
+            box-shadow: 0 40px 60px -20px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
+        }
+        .text-underline-reveal {
+            position: relative;
+        }
+        .text-underline-reveal::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+        .text-underline-reveal:hover::after {
+            width: 100%;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "tertiary": "#5d5f5f",
+                        "inverse-primary": "#dec800",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#303031",
+                        "outline-variant": "#cec7aa",
+                        "primary-fixed": "#fee400",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#201c00",
+                        "surface-container": "#efeded",
+                        "surface-container-high": "#e9e8e7",
+                        "on-secondary": "#ffffff",
+                        "primary": "#6a5f00",
+                        "secondary-container": "#e2dfde",
+                        "on-secondary-container": "#636262",
+                        "surface-bright": "#fbf9f9",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "primary-container": "#ffe500",
+                        "primary-fixed-dim": "#dec800",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-primary-fixed-variant": "#504700",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "tertiary-container": "#e4e4e4",
+                        "on-surface-variant": "#4b4731",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-background": "#1b1c1c",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-primary-container": "#726600",
+                        "secondary": "#5f5e5e",
+                        "outline": "#7d775f",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f5f3f3",
+                        "on-tertiary": "#ffffff",
+                        "background": "#fbf9f9",
+                        "surface-tint": "#6a5f00",
+                        "inverse-on-surface": "#f2f0f0",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface": "#fbf9f9",
+                        "on-surface": "#1b1c1c",
+                        "surface-dim": "#dbdad9",
+                        "surface-container-highest": "#e3e2e2",
+                        "on-tertiary-container": "#646566",
+                        "surface-variant": "#e3e2e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "section-padding": "80px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "display-md": ["Playfair Display"],
+                        "body-md": ["Lato"],
+                        "body-lg": ["Lato"],
+                        "label-md": ["Lato"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "label-lg": ["Lato"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-sm": ["Lato"]
+                    },
+                    "fontSize": {
+                        "display-md": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-lg": ["14px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<header class="fixed top-0 w-full bg-surface-container-lowest z-50 shadow-sm border-b border-outline-variant h-20">
+<nav class="flex justify-between items-center px-6 md:px-margin-desktop h-full w-full max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter">
+            NP REAL ESTATE
+        </div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-colors cursor-pointer uppercase" href="#">Buy</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-colors cursor-pointer uppercase" href="#">Sell</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-colors cursor-pointer uppercase" href="#">Rent</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-colors cursor-pointer uppercase" href="#">About</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-colors cursor-pointer uppercase" href="#">Contact</a>
+<button class="bg-primary-container text-on-primary-container font-label-lg text-label-lg px-6 py-3 rounded-DEFAULT hover:opacity-90 active:opacity-80 transition-all cursor-pointer uppercase">
+                Request Appraisal
+            </button>
+</div>
+<button class="md:hidden flex items-center text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="w-full bg-surface-container-low py-section-padding px-4 md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7 relative overflow-hidden group">
+<div class="aspect-[16/10] bg-surface-container-highest overflow-hidden">
+<img alt="High-end contemporary living room" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI28GwD34AqFNV2YSnIn0EuEjQM-NjYPg26--lu3mL_IE6Y07sCInPAOye9l9MFyQ_FHWFIAes_7frYZaTgF0BfsLas8dpaqpGUPyjkYP2aTf5Cyh-aNkYya_R9fWTKWO9c3JZgTNKAwM9RHiJiM0O-tSv28qFzWxbWfF0oVPGRaXogkaC85slwBXOYKAhR1I_1CGtmMxBlH_CRwnWfaptmU1QhhyuSNP_4358WsBu4MzOaIVCdmxR"/>
+</div>
+<div class="absolute top-6 left-6 bg-primary-container text-on-primary-container px-4 py-1 font-label-lg text-label-lg uppercase tracking-wider">
+                        Market Insight
+                    </div>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-stack-md">
+<span class="text-secondary font-label-lg text-label-lg uppercase tracking-widest">Featured Story • May 2024</span>
+<h1 class="font-display-lg text-4xl md:text-5xl lg:text-display-lg text-on-surface leading-tight">
+                        The 2024 Suburban Migration: Why Local Knowledge is Your Best Asset
+                    </h1>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                        Navigate the changing landscape of our local property market with surgical precision. We analyze the shift in buyer sentiment and what it means for your property value this spring.
+                    </p>
+<div class="pt-4">
+<button class="bg-[#333333] text-white px-8 py-4 font-label-lg text-label-lg hover:bg-primary-container hover:text-on-surface transition-all duration-300 uppercase">
+                            Read Full Report
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Intelligence Report -->
+<section class="py-section-padding px-4 md:px-margin-desktop bg-surface">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-6">
+<div>
+<h2 class="font-display-md text-display-md text-on-surface mb-2">The Intelligence Report</h2>
+<p class="text-secondary font-body-lg text-body-lg">Expert perspectives on selling, buying, and maintaining property value.</p>
+</div>
+<div class="flex gap-4 border-b border-outline-variant pb-2 overflow-x-auto whitespace-nowrap">
+<button class="text-primary font-bold border-b-2 border-primary pb-1 font-label-lg text-label-lg uppercase">All Articles</button>
+<button class="text-secondary hover:text-primary transition-colors font-label-lg text-label-lg px-2 uppercase">Market Trends</button>
+<button class="text-secondary hover:text-primary transition-colors font-label-lg text-label-lg px-2 uppercase">Sellers Guide</button>
+<button class="text-secondary hover:text-primary transition-colors font-label-lg text-label-lg px-2 uppercase">Buyer Advice</button>
+<button class="text-secondary hover:text-primary transition-colors font-label-lg text-label-lg px-2 uppercase">Home Improvement</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Article Card 1 -->
+<article class="flex flex-col bg-surface-container-lowest border border-outline-variant hover-card transition-all duration-300">
+<div class="relative overflow-hidden aspect-video">
+<img alt="Kitchen renovation" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1gHG9dsapgxKd-txryyqa_FnFo_OjigvKHS23HKif5PIv7n6mwmQgLDX0d6NSc4ZmFGApJIas6_3ZQ6FPdQFUa5errTnz86nvhnJ-ErK4v-aE4euK5Pvx2QYGIifLolPz3b-QNGOUruLUWcYorJkxAOX9v0QwENg40bauSAKnWHxebOpQ18KYxQ1X85q_N0PL0sNEBbb_CA1Qfax3hFomhVOr3-Xekodh_QgZ3RGLNAaDitzaM270"/>
+<div class="absolute top-4 left-4 bg-on-surface text-surface-container-lowest px-3 py-1 font-label-md text-label-md uppercase">Sellers</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="text-secondary font-label-lg text-label-lg mb-2 uppercase tracking-wide">Home Improvement • 5 min read</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 leading-snug">5 High-Impact Renovations Under $10k to Boost Sale Price</h3>
+<p class="text-secondary font-body-md text-body-md mb-6 line-clamp-3">Discover the strategic upgrades that professional flippers use to maximize ROI without breaking the bank. Learn why focus on lighting and hardware pays off.</p>
+<a class="mt-auto text-on-surface font-label-lg text-label-lg flex items-center gap-2 group uppercase" href="#">
+<span class="text-underline-reveal">Read Article</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article Card 2 -->
+<article class="flex flex-col bg-surface-container-lowest border border-outline-variant hover-card transition-all duration-300">
+<div class="relative overflow-hidden aspect-video">
+<img alt="Data trends" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClfNLs5VQtTyKKCVlrqUQmUc7ND8vZp1j1WxT9_Ksi4RSNVlkMI1zGM7fdAbdNPdoDKHtOeMBCr7wU2eTRzFhMDIXTgM2FyCMp-du5ek7IbUNKFbV-PHfL_8Jk0X-GYXacrNEXhSgwCF1RzAZQuysEfOe0kVPlVhrbox9uDMwmMSKtUeYpGT6rW3OCETO3om5x49FfKE5KYkH5JDlKJ_C2ukYgnNfCcl38jVorLW6skGZTdtKBpfgR"/>
+<div class="absolute top-4 left-4 bg-on-surface text-surface-container-lowest px-3 py-1 font-label-md text-label-md uppercase">Trends</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="text-secondary font-label-lg text-label-lg mb-2 uppercase tracking-wide">Market Data • 8 min read</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 leading-snug">Quarterly Review: Why Auction Clearance Rates Are Defying Forecasts</h3>
+<p class="text-secondary font-body-md text-body-md mb-6 line-clamp-3">An in-depth look at the local resilience factors keeping property prices stable despite interest rate fluctuations across the wider region.</p>
+<a class="mt-auto text-on-surface font-label-lg text-label-lg flex items-center gap-2 group uppercase" href="#">
+<span class="text-underline-reveal">View the Numbers</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Stats Card -->
+<div class="flex flex-col h-full">
+<div class="bg-on-surface text-primary-container p-8 h-full flex flex-col justify-center border border-on-surface rounded-DEFAULT shadow-lg">
+<span class="material-symbols-outlined text-4xl mb-4 text-primary-fixed">analytics</span>
+<h4 class="font-display-md text-headline-md text-surface-container-lowest mb-6">Local Stats Snapshot</h4>
+<div class="space-y-6">
+<div class="flex justify-between items-center border-b border-surface-variant/20 pb-2">
+<span class="text-surface-variant font-label-lg text-label-lg uppercase">Avg. Days on Market</span>
+<span class="font-display-md text-headline-md text-surface-container-lowest">15 Days</span>
+</div>
+<div class="flex justify-between items-center border-b border-surface-variant/20 pb-2">
+<span class="text-surface-variant font-label-lg text-label-lg uppercase">Median Sale Price</span>
+<span class="font-display-md text-headline-md text-primary-fixed">$1.42M</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-surface-variant font-label-lg text-label-lg uppercase">New Listings (MoM)</span>
+<span class="font-display-md text-headline-md text-primary-fixed">+12%</span>
+</div>
+</div>
+<button class="mt-10 border-2 border-primary-container text-primary-container py-4 font-label-lg text-label-lg uppercase hover:bg-primary-container hover:text-on-surface transition-colors tracking-widest">
+                            Download Full Report
+                        </button>
+</div>
+</div>
+<!-- Article Card 4 -->
+<article class="flex flex-col bg-surface-container-lowest border border-outline-variant hover-card transition-all duration-300">
+<div class="relative overflow-hidden aspect-video">
+<img alt="Modern property at twilight" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL1vGOWgrpOOQn9hyirJrrMwmPwka_frvoyzqoxZtjdV-uJi6u9ND2quv0nzxuXIXylhS6xD_t2qkMCgRP8KeOeujf3E1rjkiNZU1s-jdE_Vho6eKfkv5vbQNXjnnIbJirKwrZiza5ded8g54PA7ZMY2TsSeh2F9fHqD6gG999n76_S4xYmxA0fSy1o6KriZCJhMbjZ0UveZodQO6x48n_BsDtVvxsItXX_uPeEgLQNIbw26kmSU9e"/>
+<div class="absolute top-4 left-4 bg-on-surface text-surface-container-lowest px-3 py-1 font-label-md text-label-md uppercase">Buyers</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="text-secondary font-label-lg text-label-lg mb-2 uppercase tracking-wide">Guide • 6 min read</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 leading-snug">The First-Home Buyer's Checklist: Securing Your Future</h3>
+<p class="text-secondary font-body-md text-body-md mb-6 line-clamp-3">From pre-approval to settlement day, we break down the complex journey into manageable, expert-backed steps for local buyers.</p>
+<a class="mt-auto text-on-surface font-label-lg text-label-lg flex items-center gap-2 group uppercase" href="#">
+<span class="text-underline-reveal">Read Guide</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article Card 5 -->
+<article class="flex flex-col bg-surface-container-lowest border border-outline-variant hover-card transition-all duration-300">
+<div class="relative overflow-hidden aspect-video">
+<img alt="Professional real estate consultation" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsOf6abxtyVIbZOCd4F5kl7QiEobSV88WUThQGk7W-o_5dU7_sO7cyVaHrhpzrJUSwpHWCsvwsJd3e1SXwPE4afFDnmFOsU32pJwEuwVe-g0rBFZCxpMngD94QXJfmhGQ2Ad20CJdFrCLjjpmLTuXGWsE5wSWaQCusGep2wnfaf_WFrW6V1BeUUx91ouiGdxDFqUUnEmJq3OYGsfShTa7OB0CUg00LtxdZcO5baatSKDfw4BWcjp-V"/>
+<div class="absolute top-4 left-4 bg-on-surface text-surface-container-lowest px-3 py-1 font-label-md text-label-md uppercase">Expertise</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="text-secondary font-label-lg text-label-lg mb-2 uppercase tracking-wide">Advice • 4 min read</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 leading-snug">Why Auction vs Private Treaty: Choosing the Right Strategy</h3>
+<p class="text-secondary font-body-md text-body-md mb-6 line-clamp-3">Understanding the psychology of the sale. We explain which method currently yields higher premiums in the local demographic.</p>
+<a class="mt-auto text-on-surface font-label-lg text-label-lg flex items-center gap-2 group uppercase" href="#">
+<span class="text-underline-reveal">Strategy Guide</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article Card 6 -->
+<article class="flex flex-col bg-surface-container-lowest border border-outline-variant hover-card transition-all duration-300">
+<div class="relative overflow-hidden aspect-video">
+<img alt="Curb appeal details" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtBbdwTOxLIFTE7Vso_bLhm_dPgARCmgScesgpVFGrFjJeya0JOHZ0ngn3pmNdM0B8jeYnW2fnmiWadhrTfzvzNwYsXZVKv3Is3sxgxTX45f4L6MVQZb0bqybH7DqQt2Ar5TsNMpCOHB5ZiB5VEvxRKkcz9dEJZmFtWRgT140tJ8CWYoWa1uPg2a5romTrVBg4NY5r_8axVc34w_hg-KIzV3njeScu4T4l2hn6lW5jCzWnW9EWgNQZ"/>
+<div class="absolute top-4 left-4 bg-on-surface text-surface-container-lowest px-3 py-1 font-label-md text-label-md uppercase">Lifestyle</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="text-secondary font-label-lg text-label-lg mb-2 uppercase tracking-wide">Home • 7 min read</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 leading-snug">Curb Appeal Essentials: Making the Ultimate First Impression</h3>
+<p class="text-secondary font-body-md text-body-md mb-6 line-clamp-3">Buyers decide within 30 seconds of arrival. Our expert styling team shares their secrets for exterior presentation that commands attention.</p>
+<a class="mt-auto text-on-surface font-label-lg text-label-lg flex items-center gap-2 group uppercase" href="#">
+<span class="text-underline-reveal">Learn More</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Newsletter / Appraisal CTA -->
+<section class="bg-on-surface py-section-padding px-4 md:px-margin-desktop overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+<div class="w-full h-full bg-gradient-to-l from-primary-container to-transparent"></div>
+</div>
+<div class="max-w-container-max mx-auto relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div>
+<h2 class="font-display-lg text-display-md md:text-display-lg text-surface-container-lowest mb-6">Want a tailored local market report?</h2>
+<p class="text-surface-variant font-body-lg text-body-lg mb-8 max-w-xl">
+                        Join 5,000+ local homeowners who receive our monthly "Intelligence Memo" on property trends and off-market opportunities.
+                    </p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-lg">
+<input class="flex-grow bg-on-surface text-surface-container-lowest border border-outline px-6 py-4 focus:ring-2 focus:ring-primary-container focus:border-transparent outline-none transition-all font-body-md" placeholder="Email Address" type="email"/>
+<button class="bg-primary-container text-on-primary-container px-8 py-4 font-label-lg text-label-lg uppercase hover:opacity-90 transition-all whitespace-nowrap" type="submit">
+                            Subscribe Now
+                        </button>
+</form>
+</div>
+<div class="hidden lg:flex justify-end">
+<div class="bg-surface-container-lowest p-10 max-w-sm flex flex-col gap-stack-md relative premium-shadow rounded-DEFAULT">
+<div class="absolute -top-4 -right-4 bg-primary-container w-12 h-12 flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-on-primary-container">trending_up</span>
+</div>
+<h3 class="font-display-md text-headline-md text-on-surface">Curious about your property's current value?</h3>
+<p class="text-secondary font-body-md text-body-md">Our experts provide obligation-free appraisals using real-time market data.</p>
+<button class="mt-4 border-2 border-on-surface text-on-surface py-4 px-6 font-label-lg text-label-lg uppercase hover:bg-on-surface hover:text-white transition-all duration-300">
+                            Request Appraisal
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-on-surface w-full py-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-6 md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1 mb-8 md:mb-0">
+<div class="font-display-md text-headline-md font-bold text-surface-container-lowest mb-6">
+                NP REAL ESTATE
+            </div>
+<p class="text-surface-variant font-body-md text-body-md mb-6 leading-relaxed">
+                Professional advisors delivering market-leading results through local mastery and surgical precision.
+            </p>
+<div class="flex gap-4">
+<a class="text-surface-variant hover:text-primary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-surface-variant hover:text-primary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-primary-fixed font-label-lg text-label-lg uppercase tracking-widest mb-6">Resources</h4>
+<ul class="space-y-4">
+<li><a class="text-surface-variant hover:text-primary-fixed-dim transition-all duration-200 hover:translate-x-1 inline-block font-body-md text-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-surface-variant hover:text-primary-fixed-dim transition-all duration-200 hover:translate-x-1 inline-block font-body-md text-body-md" href="#">Terms of Service</a></li>
+<li><a class="text-surface-variant hover:text-primary-fixed-dim transition-all duration-200 hover:translate-x-1 inline-block font-body-md text-body-md" href="#">Office Locations</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-primary-fixed font-label-lg text-label-lg uppercase tracking-widest mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-surface-variant hover:text-primary-fixed-dim transition-all duration-200 hover:translate-x-1 inline-block font-body-md text-body-md" href="#">Meet the Team</a></li>
+<li><a class="text-surface-variant hover:text-primary-fixed-dim transition-all duration-200 hover:translate-x-1 inline-block font-body-md text-body-md" href="#">Market Reports</a></li>
+<li><a class="text-surface-variant hover:text-primary-fixed-dim transition-all duration-200 hover:translate-x-1 inline-block font-body-md text-body-md" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-primary-fixed font-label-lg text-label-lg uppercase tracking-widest mb-6">Local Mastery</h4>
+<p class="text-surface-variant font-body-md text-body-md mb-4 leading-relaxed">
+                Our office operates at the intersection of data and local intuition.
+            </p>
+<div class="bg-surface-variant/10 border border-surface-variant/20 p-4 rounded-DEFAULT">
+<span class="text-primary-fixed font-display-md text-headline-sm block">#1 Agency</span>
+<span class="text-surface-variant font-label-md text-label-md uppercase">Regional Volume 2023</span>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-6 md:px-margin-desktop mt-16 pt-8 border-t border-surface-variant/10">
+<p class="text-surface-variant font-body-md text-body-md opacity-60">
+            © 2024 Nick and Prab Real Estate. All rights reserved. Powered by Ray White.
+        </p>
+</div>
+</footer>
+<script>
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('article').forEach(el => {
+        el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+        observer.observe(el);
+    });
+
+    document.querySelectorAll('.hover-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            const img = card.querySelector('img');
+            if (img) img.style.transform = 'scale(1.05)';
+        });
+        card.addEventListener('mouseleave', () => {
+            const img = card.querySelector('img');
+            if (img) img.style.transform = 'scale(1)';
+        });
+    });
+</script>
+</body></html>

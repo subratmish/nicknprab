@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .premium-shadow {
+            box-shadow: 0 20px 40px -15px rgba(27, 28, 28, 0.06);
+        }
+        .premium-shadow:hover {
+            box-shadow: 0 30px 60px -12px rgba(27, 28, 28, 0.08);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "tertiary": "#5d5f5f",
+                        "inverse-primary": "#dec800",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#303031",
+                        "outline-variant": "#cec7aa",
+                        "primary-fixed": "#fee400",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#201c00",
+                        "surface-container": "#efeded",
+                        "surface-container-high": "#e9e8e7",
+                        "on-secondary": "#ffffff",
+                        "primary": "#6a5f00",
+                        "secondary-container": "#e2dfde",
+                        "on-secondary-container": "#636262",
+                        "surface-bright": "#fbf9f9",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "primary-container": "#ffe500",
+                        "primary-fixed-dim": "#dec800",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-primary-fixed-variant": "#504700",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "tertiary-container": "#e4e4e4",
+                        "on-surface-variant": "#4b4731",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-background": "#1b1c1c",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-primary-container": "#726600",
+                        "secondary": "#5f5e5e",
+                        "outline": "#7d775f",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f5f3f3",
+                        "on-tertiary": "#ffffff",
+                        "background": "#fbf9f9",
+                        "surface-tint": "#6a5f00",
+                        "inverse-on-surface": "#f2f0f0",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface": "#fbf9f9",
+                        "on-surface": "#1b1c1c",
+                        "surface-dim": "#dbdad9",
+                        "surface-container-highest": "#e3e2e2",
+                        "on-tertiary-container": "#646566",
+                        "surface-variant": "#e3e2e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "section-padding": "80px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Playfair Display"],
+                        "display-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Lato"],
+                        "body-md": ["Lato"],
+                        "body-sm": ["Lato"],
+                        "label-lg": ["Lato"],
+                        "label-md": ["Lato"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full bg-surface-container-lowest z-50 border-b border-outline-variant shadow-sm h-20">
+<nav class="flex justify-between items-center px-margin-desktop h-full w-full max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight cursor-pointer">
+            NP REAL ESTATE
+        </div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#">Buy</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#">Sell</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Recent Success</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#">About</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-md text-label-md px-stack-lg py-3 rounded-DEFAULT hover:opacity-90 active:opacity-80 transition-all cursor-pointer font-bold">
+            Request Appraisal
+        </button>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section: Market Dominance -->
+<section class="px-margin-desktop max-w-container-max mx-auto py-section-padding">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7">
+<h1 class="font-display-lg text-6xl text-on-surface mb-stack-md leading-tight">
+                    Proven Results. <br/>
+<span class="text-primary">Record Breaking Success.</span>
+</h1>
+<p class="font-body-lg text-lg text-secondary max-w-xl mb-stack-lg leading-relaxed">
+                    Explore our recently sold portfolio. From designer townhomes to sprawling estates, our strategic approach consistently delivers premium outcomes for our clients across the region.
+                </p>
+<div class="flex flex-wrap gap-stack-md">
+<div class="bg-on-surface text-primary-fixed px-stack-lg py-stack-md rounded-DEFAULT flex flex-col">
+<span class="font-headline-md text-2xl font-bold">$142M+</span>
+<span class="font-label-md text-xs uppercase tracking-wider opacity-80">Total Sales 2023</span>
+</div>
+<div class="bg-surface-container-high px-stack-lg py-stack-md rounded-DEFAULT flex flex-col">
+<span class="font-headline-md text-2xl font-bold text-on-surface">14 Days</span>
+<span class="font-label-md text-xs uppercase tracking-wider text-secondary">Avg. Days on Market</span>
+</div>
+<div class="bg-surface-container-high px-stack-lg py-stack-md rounded-DEFAULT flex flex-col">
+<span class="font-headline-md text-2xl font-bold text-on-surface">98.5%</span>
+<span class="font-label-md text-xs uppercase tracking-wider text-secondary">Auction Clearance</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-[4/5] rounded-DEFAULT overflow-hidden relative shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A professional, high-end editorial portrait of two successful real estate agents in charcoal suits, standing confidently in a sun-drenched modern architectural interior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP6UYDXbexQgoUznm7z1kUcS4ofp2qITBPqedi1A1rEZKQ52T_c4ERFZ0FEemXi6rC6VgrWA63WVueFanQb38Q7eL-BBFHRCMZjEBjWZQRZle5KBWsAEvsUghgRrovmFpadf0kfge7QXLo2MMTBRIOa361fdmPQCkeBbZIJVWYQxV_V7x2bM2Mf5R1jZYQENYGucEt8b3U9IuR2s9vpDfYH3ocythyV-zKuDERS8QN4OVBQXv2QTqB"/>
+<div class="absolute bottom-0 left-0 right-0 p-stack-lg bg-gradient-to-t from-black/80 to-transparent">
+<div class="flex items-center gap-stack-md text-surface-container-lowest">
+<div class="w-12 h-12 rounded-full border-2 border-primary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A close-up headshot of a smiling, confident female homeowner." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW759HUfL3A0iFP4j2PC8F03V2PyFZDSVrKocuxhAmzGqKNjT91GdOifGZ9xEtWpn1ccUPBi-ZQFW90dix2tTz-wsVKJipClOKYGLKhHYoCjXOfLET5h-1AHiAEdcifonnt9w6XLZl-f0CmMF3qzaxTceRdIzWTx9nNiiAi2BcyDOYBV2KJtMByhTJrv9uXDh66t9v5IsaZ9IBsoq4lH1TaXgmy68Q2ZkNH9oUx08J2KHjfSMCAa-R"/>
+</div>
+<div>
+<p class="font-body-md italic text-sm">"Nick &amp; Prab exceeded our price expectation by $50k in just two weeks."</p>
+<p class="font-label-md text-xs font-bold">— Sarah &amp; Tom, Vendors</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Search & Filter Bar -->
+<section class="bg-white sticky top-20 z-40 border-b border-outline-variant py-4">
+<div class="px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row gap-stack-md items-center">
+<div class="relative flex-grow w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-secondary">search</span>
+<input class="w-full pl-12 pr-4 py-4 border-outline-variant rounded-DEFAULT focus:ring-2 focus:ring-primary-container focus:border-primary transition-all font-body-md bg-surface-container-low" placeholder="Search by suburb or property type..." type="text"/>
+</div>
+<div class="flex gap-stack-sm w-full md:w-auto">
+<select class="border-outline-variant bg-surface-container-low rounded-DEFAULT py-4 px-stack-md font-label-md focus:ring-primary">
+<option>Price Range</option>
+<option>$1M - $2M</option>
+<option>$2M - $5M</option>
+<option>$5M+</option>
+</select>
+<select class="border-outline-variant bg-surface-container-low rounded-DEFAULT py-4 px-stack-md font-label-md focus:ring-primary">
+<option>Property Type</option>
+<option>House</option>
+<option>Apartment</option>
+<option>Land</option>
+</select>
+<button class="bg-on-surface text-surface-container-lowest px-stack-lg py-4 font-label-md font-bold rounded-DEFAULT hover:bg-primary hover:text-on-primary transition-all whitespace-nowrap">
+                    Filter Results
+                </button>
+</div>
+</div>
+</section>
+<!-- Results Grid -->
+<section class="px-margin-desktop max-w-container-max mx-auto py-section-padding">
+<div class="flex justify-between items-end mb-stack-lg">
+<div>
+<span class="font-label-md text-xs text-primary font-bold uppercase tracking-[0.2em]">Latest Transactions</span>
+<h2 class="font-headline-lg text-3xl font-bold mt-2">Recently Sold Portfolio</h2>
+</div>
+<p class="font-label-md text-sm text-secondary">Showing 158 results</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Property Card 1 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden premium-shadow transition-all duration-300">
+<div class="relative aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A luxury contemporary architectural home." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARSmuRfAZFIdLBAjgWsi8msg2DtFTLdw-sgxV6QRvqIxCm1FuqlKxU0Awlg33qRUSdIgPRHxJ0UdhtQSLwiTEvMDcvi7viy-zdK42KSljxVigAOP7DnNFdvuzPl3TL7GqMPZaJ1JIoR1x3UBciMjfZGhgRnIuu6EcPJT5O0RwoRIxgyiU3_brjYn895aqk7JVSkv-8q2Mc_Hs9U5IdTgEeOXzTw0zk2w72tGldKSSCNLDO24U-cE_L"/>
+<div class="absolute top-4 left-4 bg-on-surface text-surface-container-lowest px-4 py-1 font-label-md font-bold tracking-widest uppercase text-[10px]">Sold</div>
+<div class="absolute top-4 right-4 bg-primary-container text-on-surface px-3 py-1 font-label-md text-[10px] font-bold shadow-sm">Record Price</div>
+</div>
+<div class="p-stack-lg">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-xl font-bold text-on-surface">22 Azure Court, Brighton</h3>
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors">favorite</span>
+</div>
+<div class="flex gap-stack-md mb-stack-md text-secondary font-label-md text-xs">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bed</span> 5 Beds</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bathtub</span> 3 Baths</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">directions_car</span> 2 Cars</div>
+</div>
+<div class="border-t border-outline-variant pt-stack-md flex justify-between items-center">
+<div>
+<p class="font-label-md text-[10px] text-secondary uppercase tracking-wider">Sale Price</p>
+<p class="font-headline-md text-xl font-bold text-primary">$4,250,000</p>
+</div>
+<div class="text-right">
+<p class="font-label-md text-[10px] text-secondary uppercase tracking-wider">Days on Market</p>
+<p class="font-body-md text-sm font-bold text-on-surface">11 Days</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Property Card 2 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden premium-shadow transition-all duration-300">
+<div class="relative aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An elegant Victorian heritage home." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe1_xM3Kf8cLlVR-R16LHKVEd33NXbCsBQvnH7CoAsQ-ThIVuwSMj4dGnpjnfIUCKh_QWLYYXK0WGPrp3AEPL9sqxbVKv4cHg2UGAEmq2DJC2Y3UTOhdN9l5xUt068Ci2lFrmDDKYCNJDARVWiQTABaO3q1OGH-qMCdKeHb4Nj3k3bNZdIyfDh_IOidNUzkP8XOfgWTBLZQOm0xSUBWifljXymCAwEomqoKRC4KyeMI2N5Hwfwag0I"/>
+<div class="absolute top-4 left-4 bg-on-surface text-surface-container-lowest px-4 py-1 font-label-md font-bold tracking-widest uppercase text-[10px]">Sold</div>
+</div>
+<div class="p-stack-lg">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-xl font-bold text-on-surface">104 Heritage Way, Malvern</h3>
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors">favorite</span>
+</div>
+<div class="flex gap-stack-md mb-stack-md text-secondary font-label-md text-xs">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bed</span> 4 Beds</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bathtub</span> 2 Baths</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">directions_car</span> 1 Cars</div>
+</div>
+<div class="border-t border-outline-variant pt-stack-md flex justify-between items-center">
+<div>
+<p class="font-label-md text-[10px] text-secondary uppercase tracking-wider">Sale Price</p>
+<p class="font-headline-md text-xl font-bold text-primary">Undisclosed</p>
+</div>
+<div class="text-right">
+<p class="font-label-md text-[10px] text-secondary uppercase tracking-wider">Method</p>
+<p class="font-body-md text-sm font-bold text-on-surface">Auction</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Property Card 3 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden premium-shadow transition-all duration-300">
+<div class="relative aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A sleek, minimalist penthouse." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUS_gAsjyhqC238wPisRFBaJNcLe43asoY_bDZ97AY32aF6PlS80R4shDar0cgcD3Q_tVeJjZoWWUXj548ybORckT-0v58T05MQnBxjptxfVkODH9qS7VHVoxl-E6cm2Dm_rCtzmsEKyroaS7vd3unVaH_DebJz9h4flPfx4oeU3Tf25q-mMSHUjqH66twxNvmSUJllq88PN8qJzDvY5F5Kgl-aBtEyzlfbvlilnKwvaD-KRgYQI9Y"/>
+<div class="absolute top-4 left-4 bg-on-surface text-surface-container-lowest px-4 py-1 font-label-md font-bold tracking-widest uppercase text-[10px]">Sold</div>
+<div class="absolute top-4 right-4 bg-on-surface text-primary-fixed px-3 py-1 font-label-md text-[10px] font-bold shadow-sm">Off Market</div>
+</div>
+<div class="p-stack-lg">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-xl font-bold text-on-surface">901/50 Skyline Dr, Southbank</h3>
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors">favorite</span>
+</div>
+<div class="flex gap-stack-md mb-stack-md text-secondary font-label-md text-xs">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bed</span> 3 Beds</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bathtub</span> 3 Baths</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">directions_car</span> 2 Cars</div>
+</div>
+<div class="border-t border-outline-variant pt-stack-md flex justify-between items-center">
+<div>
+<p class="font-label-md text-[10px] text-secondary uppercase tracking-wider">Sale Price</p>
+<p class="font-headline-md text-xl font-bold text-primary">$2,890,000</p>
+</div>
+<div class="text-right">
+<p class="font-label-md text-[10px] text-secondary uppercase tracking-wider">Days on Market</p>
+<p class="font-body-md text-sm font-bold text-on-surface">4 Days</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Property Card 4 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden premium-shadow transition-all duration-300">
+<div class="relative aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A sprawling country estate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYnjHN4MWOdA2lqeE_obC0vEPrcZxC2MPZ_D4e_SRvOC9juobhkVOoJz8PXP9Uj_LwcPHAo3IyNo9kvt0Pof0VqVECQqeFnAE7R4jhDeZIW3TiKIpawCeHgPPct--ksXE5a01PIoDDRP8FQeL1MJJ_oD1mzPeMMIjJfxs39mnkW9ZdODtLTl-XCyp7UPUaajPp8hqqopQOF5JcOwaDHQGfnVkAHndlyhwBAUjdYVD3yw5Fe7uxfqvI"/>
+<div class="absolute top-4 left-4 bg-on-surface text-surface-container-lowest px-4 py-1 font-label-md font-bold tracking-widest uppercase text-[10px]">Sold</div>
+</div>
+<div class="p-stack-lg">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-xl font-bold text-on-surface">The Elms, Flinders Range</h3>
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors">favorite</span>
+</div>
+<div class="flex gap-stack-md mb-stack-md text-secondary font-label-md text-xs">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bed</span> 6 Beds</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bathtub</span> 5 Baths</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">directions_car</span> 4 Cars</div>
+</div>
+<div class="border-t border-outline-variant pt-stack-md flex justify-between items-center">
+<div>
+<p class="font-label-md text-[10px] text-secondary uppercase tracking-wider">Sale Price</p>
+<p class="font-headline-md text-xl font-bold text-primary">$8,500,000</p>
+</div>
+<div class="text-right">
+<p class="font-label-md text-[10px] text-secondary uppercase tracking-wider">Method</p>
+<p class="font-body-md text-sm font-bold text-on-surface">Private Sale</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Property Card 5 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden premium-shadow transition-all duration-300">
+<div class="relative aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A modern coastal home." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYXqS5tApr7CI7mHehzFargjNwt-jV8Fh0SKe9jDgYQyevbbDUTXLX0qJx9yfJyoT16nsJ1PBJwAwkz6O9Vt5Jutlw35aazq6ijaAJO3PEHTKvu1SqQl-HNOU7LS3qZ_20ZGLrrqNuEU6f7r4HX7PDoXHXRqyCDvfnRhBFQknaT84KcBRofOHHqgQCCVkN1OY-cvM3XCMsRJd4CG25zSkSt7s-DbGFDY1qLJKzuQMnAU9P3sd0IMPC"/>
+<div class="absolute top-4 left-4 bg-on-surface text-surface-container-lowest px-4 py-1 font-label-md font-bold tracking-widest uppercase text-[10px]">Sold</div>
+</div>
+<div class="p-stack-lg">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-xl font-bold text-on-surface">58 Cliffside, Sorrento</h3>
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors">favorite</span>
+</div>
+<div class="flex gap-stack-md mb-stack-md text-secondary font-label-md text-xs">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bed</span> 4 Beds</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bathtub</span> 3 Baths</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">directions_car</span> 2 Cars</div>
+</div>
+<div class="border-t border-outline-variant pt-stack-md flex justify-between items-center">
+<div>
+<p class="font-label-md text-[10px] text-secondary uppercase tracking-wider">Sale Price</p>
+<p class="font-headline-md text-xl font-bold text-primary">Undisclosed</p>
+</div>
+<div class="text-right">
+<p class="font-label-md text-[10px] text-secondary uppercase tracking-wider">Days on Market</p>
+<p class="font-body-md text-sm font-bold text-on-surface">18 Days</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Property Card 6 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden premium-shadow transition-all duration-300">
+<div class="relative aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An industrial-style warehouse conversion." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA11mpICeuclxAdgtd9K4ZsxQLzLZ4wIbx7YhvE7CWbjZ09o3rVBdNfurWeCyV7Ym2FhztvrMj8XJb4CDZxye5GP6dF_U3HHNy6ffme0syjwlaq7ptaiWZNIcNHJ8hGoTE3cCCo1HNQkF49jO1xYJNWTsFQtzKE47C5rgt_6MVek8Q1E47H240e3Twdgsbak5OjXQ0udi8iXL-v2c-_I6-p7D7qQYrsHxHVjemsWiGWULF_n_1cgAtv"/>
+<div class="absolute top-4 left-4 bg-on-surface text-surface-container-lowest px-4 py-1 font-label-md font-bold tracking-widest uppercase text-[10px]">Sold</div>
+</div>
+<div class="p-stack-lg">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-xl font-bold text-on-surface">The Loft, Collingwood</h3>
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors">favorite</span>
+</div>
+<div class="flex gap-stack-md mb-stack-md text-secondary font-label-md text-xs">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bed</span> 2 Beds</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bathtub</span> 2 Baths</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">directions_car</span> 1 Cars</div>
+</div>
+<div class="border-t border-outline-variant pt-stack-md flex justify-between items-center">
+<div>
+<p class="font-label-md text-[10px] text-secondary uppercase tracking-wider">Sale Price</p>
+<p class="font-headline-md text-xl font-bold text-primary">$1,560,000</p>
+</div>
+<div class="text-right">
+<p class="font-label-md text-[10px] text-secondary uppercase tracking-wider">Method</p>
+<p class="font-body-md text-sm font-bold text-on-surface">Auction</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-section-padding text-center">
+<button class="bg-on-surface text-surface-container-lowest px-12 py-4 font-label-md font-bold rounded-DEFAULT hover:bg-primary transition-all">
+                Load More Success Stories
+            </button>
+</div>
+</section>
+<!-- Testimonial Bento Section -->
+<section class="bg-surface-container-low py-section-padding overflow-hidden">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-stack-lg gap-stack-md">
+<div>
+<span class="font-label-md text-xs text-primary font-bold uppercase tracking-[0.2em]">Social Proof</span>
+<h2 class="font-headline-lg text-3xl font-bold mt-2">What Our Vendors Say</h2>
+</div>
+<div class="flex items-center gap-stack-sm text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-sm text-on-surface font-bold ml-2">4.9/5 from 200+ Reviews</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-surface-container-lowest p-stack-lg rounded-DEFAULT flex flex-col justify-between premium-shadow border border-white/50">
+<p class="font-body-md italic text-secondary mb-stack-lg leading-relaxed">"The level of detail Nick and Prab put into the marketing campaign was unprecedented. We saw 45 groups through the first weekend and had a signed contract by Wednesday. Truly exceptional service."</p>
+<div class="flex items-center gap-stack-md">
+<div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of James Thompson" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcJZIOhIu3pNToH433zKwiXGbNfTQPpZ4DMRuPhVnW42meuv1vEHwPu5ovZ5C06yIR_3WrQ76fBLqvqsSEKZ575jHk51jYd95kMhdB-j7l7-HTR1zfOsuX6LNzFKFUOgNYUTOwCi8NTwFuWD0DuynW0djcsHg_C1SH2BnjjajlwqMP-TH9LvhWVUlzgkCinWoL6PTHocuZlj4NzeAAZZ1vtL8pnT0Dgw4W6juy9clO82SQ-wxFjvRJ"/>
+</div>
+<div>
+<p class="font-label-md text-sm font-bold">James Thompson</p>
+<p class="font-label-md text-xs text-secondary">Sold in Kew</p>
+</div>
+</div>
+</div>
+<div class="bg-on-surface text-surface-container-lowest p-stack-lg rounded-DEFAULT flex flex-col justify-between premium-shadow relative overflow-hidden">
+<div class="relative z-10">
+<p class="font-body-md italic mb-stack-lg leading-relaxed">"After being on the market with another agent for 3 months with no result, NP Real Estate took over and sold it within 14 days for a price that set a new block record. I wouldn't trust anyone else."</p>
+<div class="flex items-center gap-stack-md">
+<div class="w-12 h-12 rounded-full bg-primary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of Elena Rodriguez" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtFQ15CxIQMRMJg2TcQtANuF-tx4ApNOnz6pJOxU7b271oN6E3KiYPW7eUj1g5a4PLqCANMJ6C3SR99iQkGTwbSaeDcwnjdqU89w5WmjmWW-JT0RF3WhO3ZBh_mWClPA1QVcwCKwXuXu4S0grZhi1Zsq0qfjyolViOdHwmMnQhmOXQxFg-7MlEuQq5p2VtXA8wiDrszlvZuPiOCL_wIehY6ku9HGWDXQVk8rWckaKDxDE2Ei3jLljS"/>
+</div>
+<div>
+<p class="font-label-md text-sm font-bold text-primary-fixed">Elena Rodriguez</p>
+<p class="font-label-md text-xs text-surface-variant">Sold in St Kilda</p>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-surface-container opacity-10 text-[120px]">format_quote</span>
+</div>
+<div class="bg-surface-container-lowest p-stack-lg rounded-DEFAULT flex flex-col justify-between premium-shadow border border-white/50">
+<p class="font-body-md italic text-secondary mb-stack-lg leading-relaxed">"Transparency was our biggest concern, but Prab kept us updated daily. The final auction result was $120k above our reserve. They made a stressful process feel incredibly smooth and controlled."</p>
+<div class="flex items-center gap-stack-md">
+<div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="The Harrison Family" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLZ2cbvReDIiPIrDoBBVDEUQI5Y5PiqEeahSmjFwOUGJjEe5Gxa7COB4YK4d9c_QoUVArsk8rbzn66Ue-dyx_0AhaR0uRm0u3FHeOEqMKkxhQStoJR00wLRNBapv_YUMzXVfTbaKdEl5_N2MIVxag6Mw4B1GwirWvfDMf6CjGt4IvnT4hoWVcJhcrQwEHeNzGe2ms3km0ADW-CBuzLwzWT4W6U_DfbXAN1HPWPMt6KTGdlSZNUHx1n"/>
+</div>
+<div>
+<p class="font-label-md text-sm font-bold">The Harrison Family</p>
+<p class="font-label-md text-xs text-secondary">Sold in Camberwell</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA: Ready for your success? -->
+<section class="py-section-padding px-margin-desktop bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto bg-primary-container rounded-DEFAULT p-stack-lg md:p-20 relative overflow-hidden">
+<div class="relative z-10 md:flex items-center justify-between gap-gutter">
+<div class="max-w-2xl">
+<h2 class="font-display-lg text-4xl md:text-5xl text-on-surface mb-stack-md leading-tight">Your property could be our next <span class="underline decoration-primary/40">success story.</span></h2>
+<p class="font-body-lg text-lg text-on-surface-variant mb-stack-lg leading-relaxed">Contact Nick and Prab today for a confidential market appraisal and discover how our premium marketing strategy can maximize your final sale price.</p>
+<div class="flex flex-col sm:flex-row gap-stack-md">
+<button class="bg-on-surface text-surface-container-lowest px-stack-lg py-4 font-label-md font-bold rounded-DEFAULT hover:bg-black transition-all">
+                            Get Free Appraisal
+                        </button>
+<button class="border-2 border-on-surface text-on-surface px-stack-lg py-4 font-label-md font-bold rounded-DEFAULT hover:bg-on-surface hover:text-white transition-all">
+                            Speak to an Agent
+                        </button>
+</div>
+</div>
+<div class="hidden lg:block w-72 h-72 rounded-full bg-on-surface/5 absolute -right-20 -top-20"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-surface text-surface-container-lowest py-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1">
+<div class="font-headline-md text-xl font-bold text-surface-container-lowest mb-stack-md">NP REAL ESTATE</div>
+<p class="font-body-md text-sm text-surface-variant mb-stack-lg leading-relaxed">Leading the local market with transparency, integrity, and unparalleled results since 2010.</p>
+<div class="flex gap-stack-md">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary-fixed transition-colors">face_nod</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary-fixed transition-colors">share</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary-fixed transition-colors">public</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-sm font-bold text-primary-fixed mb-stack-md">Quick Links</h4>
+<ul class="space-y-3 font-body-md text-sm text-surface-variant">
+<li class="hover:text-primary-fixed-dim hover:translate-x-1 transition-all cursor-pointer">Privacy Policy</li>
+<li class="hover:text-primary-fixed-dim hover:translate-x-1 transition-all cursor-pointer">Terms of Service</li>
+<li class="hover:text-primary-fixed-dim hover:translate-x-1 transition-all cursor-pointer">Office Locations</li>
+<li class="hover:text-primary-fixed-dim hover:translate-x-1 transition-all cursor-pointer">Meet the Team</li>
+<li class="hover:text-primary-fixed-dim hover:translate-x-1 transition-all cursor-pointer underline">Market Reports</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-sm font-bold text-primary-fixed mb-stack-md">Offices</h4>
+<div class="space-y-4 font-body-md text-sm text-surface-variant">
+<p>
+<strong class="text-surface-container-lowest">Brighton Office</strong><br/>
+                    122 Church Street, Brighton VIC 3186
+                </p>
+<p>
+<strong class="text-surface-container-lowest">City Office</strong><br/>
+                    Level 15, 450 Collins St, Melbourne VIC 3000
+                </p>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-sm font-bold text-primary-fixed mb-stack-md">Newsletter</h4>
+<p class="font-body-md text-sm text-surface-variant mb-4">Get the latest market insights delivered to your inbox.</p>
+<div class="flex">
+<input class="bg-white/10 border-white/20 text-white rounded-l-DEFAULT w-full px-4 py-2 focus:ring-primary-fixed focus:border-primary-fixed outline-none" placeholder="Email address" type="email"/>
+<button class="bg-primary-fixed text-on-surface px-4 py-2 rounded-r-DEFAULT font-bold hover:bg-primary-fixed-dim transition-colors">Join</button>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 mt-section-padding pt-8 px-margin-desktop max-w-container-max mx-auto">
+<p class="font-body-md text-xs text-surface-variant/50 text-center">© 2024 Nick and Prab Real Estate. All rights reserved. Powered by Ray White.</p>
+</div>
+</footer>
+<script>
+    // Header scroll transparency effect
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 20) {
+            header.classList.add('bg-white/95', 'backdrop-blur-md');
+        } else {
+            header.classList.remove('bg-white/95', 'backdrop-blur-md');
+        }
+    });
+</script>
+</body></html>
